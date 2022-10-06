@@ -43,7 +43,7 @@ def getEntries(jsonTemplate,entryCount,labelNames):
 		cprint.yellow('\nINPUT FORMAT: {}'.format(format_string))
 
 		for entryIndex in range(indexMemory,entryCount+indexMemory):
-			entryCache=str(entryIndex)+';'+str(input("Enter data for entry {}:\n:> ".format(entryIndex+1)))
+			entryCache=str(id(entryIndex))+';'+str(input("Enter data for entry {}:\n:> ".format(entryIndex+1)))
 			for pattern in filter:
 				entryCache=entryCache.replace(pattern,dataSeperator)
 			if(entryCache[-1]==' '):
